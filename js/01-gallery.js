@@ -36,9 +36,7 @@ function onListForRenderClick(e) {
   const instance = basicLightbox.create(`
     <img src="${bigImgSrc}" width="800" height="600" >
 `);
-  instance.show();
-
-  window.addEventListener("keydown", escHandler);
+  instance.show(window.addEventListener("keydown", escHandler));
 
   function escHandler(e) {
     if (e.code === "Escape") {
