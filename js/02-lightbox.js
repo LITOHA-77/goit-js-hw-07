@@ -27,6 +27,9 @@ listForRender.addEventListener("click", onListForRenderClick);
 function onListForRenderClick(e) {
   e.preventDefault();
 
-  let gallery = new SimpleLightbox(".gallery a");
-  gallery.on("show.simplelightbox", function () {});
+  let gallery = new SimpleLightbox(".gallery a", {
+    captionsData: "alt",
+    captionDelay: "250",
+  });
+  gallery.on("show.simplelightbox");
 }
