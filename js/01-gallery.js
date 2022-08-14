@@ -40,7 +40,7 @@ function onListForRenderClick(e) {
 
   function escHandler(e) {
     if (e.code === "Escape") {
-      instance.close();
+      instance.close(window.removeEventListener("keydown", escHandler));
     }
   }
 }
